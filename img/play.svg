@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="30" cy="30" r="30"></circle>
+        <filter x="-29.2%" y="-20.8%" width="158.3%" height="158.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.721593325   0 0 0 0 0.290206011   0 0 0 0 0  0 0 0 0.564424819 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Startpage---USE-THIS" transform="translate(-60.000000, -701.000000)">
+            <g id="Introduction-Copy">
+                <g id="Group-8" transform="translate(0.000000, 636.000000)">
+                    <g id="Group-3" transform="translate(70.000000, 70.000000)">
+                        <g id="Oval">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <g id="56809" transform="translate(22.000000, 19.000000)" fill="#000000" fill-rule="nonzero">
+                            <path d="M19.4465455,10.3647273 L1.73745455,0.146545455 C1.01018182,-0.271636364 0.101090909,0.255636364 0.101090909,1.092 L0.101090909,21.5465455 C0.101090909,22.3829091 1.01018182,22.9101818 1.73745455,22.492 L19.4465455,12.2738182 C20.1738182,11.8372727 20.1738182,10.7829091 19.4465455,10.3647273 Z" id="Shape"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
