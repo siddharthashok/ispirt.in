@@ -33,17 +33,14 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/img/ispirt.svg" alt="">
 				</a>
       </div>
+			<div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
       <div class="the-navigation">
         <nav>
-          <!-- <ul>
-            <li> <a href="#">Home</a> </li>
-            <li> <a href="#">Who we are</a> </li>
-            <li> <a href="#">What we do</a> </li>
-            <li> <a href="#">Our Industry</a> </li>
-            <li> <a href="#">Engage with us</a> </li>
-            <li> <a href="#">Media</a> </li>
-          </ul> -->
-
 					<?php
 					wp_nav_menu( array(
 						'theme_location' => 'menu-1',

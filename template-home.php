@@ -141,7 +141,7 @@ get_header();
 
     <section id="blog">
       <div class="grid-container">
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x" id="feed-wrap">
 
 
           <div class="large-12 cell">
@@ -149,62 +149,77 @@ get_header();
             <a href="http://pn.ispirt.in/" target="_blank" class="button">Go to the blog</a>
             <div class="clearfix"></div>
           </div>
-          <div class="medium-4 cell">
-            <div class="wrap">
-            <div class="image-wrap" style="height:200px; background-image:url('<?php echo get_template_directory_uri(); ?>/img/t1.jpg'); background-size:cover;">
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/t1.jpg" alt=""> -->
-            </div>
-            <div class="content-wrap" style="height:100%;">
-              <div class="title">
-                <h4>Understanding iSPIRT’s Entrepreneur Connect</h4>
-              </div>
-              <div class="meta">
-                <span>May 04, 2018</span>
-              </div>
-              <p>There is confusion about how iSPIRT engages with entrepreneurs. This post explains to our engagement model so that the expectations are clear. iSPIRT’s mission is to make India into a Product Nation. iSPIRT believes that startups are a critical catalyst in this mission. In-line with the mission, we help entrepreneurs navigate market and mindset shifts …</p>
-              <a href="http://pn.ispirt.in/understanding-ispirts-entrepreneur-connect/" target="_blank">Read more</a>
-            </div>
-          </div>
 
-          </div>
+<?php
 
-          <div class="medium-4 cell">
-            <div class="wrap">
-            <div class="image-wrap" style="height:200px; background-image:url('<?php echo get_template_directory_uri(); ?>/img/t2.jpg'); background-size:cover;">
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/t2.jpg" alt=""> -->
-            </div>
-            <div class="content-wrap" style="height:100%;">
-              <div class="title">
-                <h4>Data Privacy and Empowerment in Healthcare</h4>
-              </div>
-              <div class="meta">
-                <span>June 12, 2018</span>
-              </div>
-              <p>Technology has been a boon to healthcare. Minimally-invasive procedures have significantly increased safety and recovery time of surgeries. Global collaboration between doctors has improved diagnosis and treatment. Rise in awareness of patients has increased the demand for good quality healthcare services. These improvements, coupled with the growing penetration of IT infrastructure, are generating huge volumes of …</p>
-              <a href="http://pn.ispirt.in/depainhealthcare/" target="_blank">Read more</a>
-            </div>
-          </div>
+  //  $base_url = 'http://pn.ispirt.in';
+  //  $url = 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3';
+  //  $response = wp_remote_get( 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3&_embed' );
+  //  $posts = json_decode(wp_remote_retrieve_body( $response ));
+  //
+  //  if(empty($posts))
+  //  {
+  //    return;
+  //  }
+  //
+  // foreach($posts as $post)
+  // {
+  //   $date=date_create($post->date);
+  //   $url=$base_url."/wp-json/wp/v2/media/".$post->featured_media;
+  //   $medias = wp_remote_get($url);
+  //   $mediasArr = json_decode(wp_remote_retrieve_body( $medias ));
+?>
 
-          </div>
+<!-- <div class="medium-4 cell">
+  <div class="wrap">
+  <div class="image-wrap" style="background-image:url('<?php echo $mediasArr->media_details->sizes->medium_large->source_url; ?>');"></div>
+  <div class="content-wrap">
+    <div class="title">
+      <h4><?php print_r($post->title->rendered); ?></h4>
+    </div>
+    <div class="meta">
+      <span><?php echo date_format($date,'F d, Y'); ?></span>
+    </div>
+    <?php echo $post->excerpt->rendered; ?>
+    <a href="<?php echo $post->link; ?>" target="_blank">Read more</a>
+  </div>
+</div>
 
-          <div class="medium-4 cell">
-            <div class="wrap">
-            <div class="image-wrap" style="height:200px; background-image:url('<?php echo get_template_directory_uri(); ?>/img/t3.jpeg'); background-size:cover;">
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/t3.jpeg" alt=""> -->
-            </div>
-            <div class="content-wrap" style="height:100%;">
-              <div class="title">
-                <h4>Building for Bharat – A Bharat Inclusion Initiative</h4>
-              </div>
-              <div class="meta">
-                <span>June 9, 2018</span>
-              </div>
-              <p>Bharat Inclusion Initiative seeks to equip entrepreneurs with the right knowledge, skills and tools they need to solve some of the toughest problems of India in a scalable manner using technology. While Bharat Inclusion Research Fellows are working on some of the most interesting studies, another important source of knowledge is thought leaders and domain experts …</p>
-              <a href="http://pn.ispirt.in/building-for-bharat/" target="_blank">Read more</a>
-            </div>
-          </div>
+</div> -->
 
-          </div>
+<?php
+  // }
+
+?>
+
+<div class="medium-4 cell" v-for="post in posts" v-cloak>
+
+  <div class="wrap">
+
+  <a :href="post.link" target="_blank"><div class="image-wrap" :style="post.imgSrc"></div></a>
+
+  <div class="content-wrap">
+
+    <div class="title">
+
+      <a :href="post.link" target="_blank"><h4 v-html="post.title"></h4></a>
+
+    </div>
+
+    <div class="meta">
+
+      <span>{{post.date}}</span>
+
+    </div>
+
+    <div class="excerpt" v-html="post.excerpt"></div>
+
+    <a :href="post.link" target="_blank">Read more</a>
+
+  </div>
+
+</div>
+
 
         </div>
       </div>
@@ -212,13 +227,25 @@ get_header();
 
     <section id="videos">
       <div class="grid-container">
-        <div class="grid-x grid-padding-x">
+        <div class="grid-x grid-padding-x" id="youtube-wrap">
           <div class="large-12 cell">
             <h2>Latest Videos</h2>
             <a href="http://pn.ispirt.in/" target="_blank" class="button">Follow us on Youtube</a>
             <div class="clearfix"></div>
           </div>
-          <div class="medium-3 cell">
+
+          <div class="medium-3 cell" v-for="yPost in yPosts">
+           <a :href="yPost.youtubeVideoLink">
+             <div class="image-wrap" :style="yPost.youtubeImgSrc">
+               <div class="text-wrap">
+                 <h4>{{yPost.youtubeTitle}}</h4>
+               </div>
+             </div>
+           </a>
+         </div>
+
+
+          <!-- <div class="medium-3 cell">
             <a href="#">
             <div class="image-wrap" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/i1.jpg');">
               <div class="text-wrap">
@@ -253,7 +280,7 @@ get_header();
               </div>
             </div>
             </a>
-          </div>
+          </div> -->
       </div>
       </div>
     </div>

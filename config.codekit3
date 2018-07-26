@@ -84,6 +84,16 @@
 		"oAP": "\/header.php",
 		"oF": 0
 		},
+	"\/img\/down-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/down-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -387,6 +397,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/min\/app-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/app-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/navigation.js": {
 		"ft": 64,
 		"ma": 0,
@@ -443,6 +463,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/vendor\/min\/what-input-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/vue.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/vue.min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0

@@ -77,6 +77,8 @@ Designed and developed by <a href="#">GrandWorks</a>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/what-input.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/foundation.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/vue.min.js"></script>
+
 <script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
 
 </body>
