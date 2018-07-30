@@ -29,19 +29,12 @@
 get_header();
 ?>
 
-
-
-
-
-
 <header id="top-header">
-      <div class="grid-x" data-equalize-on="medium">
+      <div class="grid-x" data-equalizer data-equalize-on="medium">
       <div class="left-content medium-8 cell" data-equalizer-watch>
         <div class="intro-text">
           <div class="wrap">
-            <h2>Promoting Policies,<br>
-              Growth Hacking & Mentoring<br>
-              Product Entrepreneurs</h2>
+            <h2><?php the_field('intro'); ?></h2>
           </div>
         </div>
         <div class="key-focus">
@@ -51,9 +44,8 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/img/s1.svg" alt="">
               </div>
               <div class="details">
-                <p>At iSprit we focus on building
-                great releationships with innovative businesses. We mentor for growth.</p>
-                <a href="#">Learn how we help businesses</a>
+                <p><?php the_field('special_block_one'); ?></p>
+                <a href="<?php the_field('special_block_one_link'); ?>">Know more</a>
               </div>
             </div>
 
@@ -62,9 +54,8 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/img/s2.svg" alt="">
               </div>
               <div class="details">
-                <p>At iSprit we focus on building
-                great releationships with innovative businesses. We mentor for growth.</p>
-                <a href="#">Learn how we help businesses</a>
+                <p><?php the_field('special_block_two'); ?></p>
+                <a href="<?php the_field('special_block_two_link'); ?>">Know more</a>
               </div>
             </div>
 
@@ -73,16 +64,16 @@ get_header();
         <div class="header-feature">
           <div class="grid-x">
           <div class="large-3 cell">
-            <a href="#">
+            <a href="<?php the_field('special_block_two_link'); ?>">
               <div class="video-feature" style="background-image: url('https://img.youtube.com/vi/YRMUwALjqf8/hqdefault.jpg');">
               </div>
             </a>
           </div>
           <div class="large-9 cell">
             <div class="content-feature" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/letter.jpg');">
-              <h3>Annual Letter 2017</h3>
-              <p>Four years on, there has been good progress but there is much more to do. We believe that Silicon Valley does an admirable job of innovating for the first billion. India has the potential to innovate for the next six billion.</p>
-              <a href="#">Read more</a>
+              <h3><?php the_field('featured_message_title'); ?></h3>
+              <p><?php the_field('featured_message_content'); ?></p>
+              <a href="<?php the_field('featured_message_link'); ?>">Read more</a>
             </div>
           </div>
           </div>
