@@ -31,7 +31,7 @@ get_header();
 
 <header id="top-header">
       <div class="grid-x" data-equalizer data-equalize-on="medium">
-      <div class="left-content medium-8 cell" data-equalizer-watch>
+      <div class="left-content medium-8 cell small-order-2 large-order-1" data-equalizer-watch>
         <div class="intro-text">
           <div class="wrap">
             <h2><?php the_field('intro'); ?></h2>
@@ -79,7 +79,7 @@ get_header();
           </div>
         </div>
       </div>
-      <div class="right-image medium-4 cell" data-equalizer-watch>
+      <div class="right-image medium-4 cell small-order-1 large-order-2" data-equalizer-watch>
 
       </div>
     </div>

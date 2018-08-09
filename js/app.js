@@ -64,6 +64,7 @@ function getData()
   let data = [];
   return new Promise((resolve,reject)=>{
       requestData(apiUrl).then(posts => {
+          //console.log(posts);
         if(posts.length==0)
           {
             reject('No Posts Found');
@@ -72,17 +73,37 @@ function getData()
           let temp={};
           let newDate = new Date(post.date);
           let post_url = `${baseUrl}/wp-json/wp/v2/media/${post.featured_media}`;
-          requestData(post_url).then(imageDetails => {
-               temp['link']=post.link;
-               temp['imgSrc']=`background-image:url(${imageDetails.media_details.sizes.medium.source_url});`;
-               temp['title']=post.title.rendered;
-               temp['excerpt']=post.excerpt.rendered;
-               temp['date'] = `${
-        months[newDate.getMonth()]
-      } ${newDate.getDay()}, ${newDate.getFullYear()}`;
-               data.push(temp);
-          });
+          let formatedDate= `${months[newDate.getMonth()]} ${newDate.getDate()}, ${newDate.getFullYear()}`;
+          //console.log(post);
+          if(post.featured_media==0)
+          {
+            temp['id'] = post.id;
+            temp['link']=post.link;
+            temp['imgSrc'] = `background-image:url(http://via.placeholder.com/350x150)`;//change the image link here
+            temp['title']=post.title.rendered;
+            temp['excerpt']=post.excerpt.rendered;
+            temp['date'] = formatedDate
+            data.unshift(temp);
+
+          }
+          else
+          {
+                requestData(post_url).then(imageDetails => {
+                    temp['id'] = post.id;
+                    temp['link']=post.link;
+                    let imageUrl = imageDetails.media_details.sizes.medium.source_url;
+                    temp['imgSrc']=`background-image:url(${imageUrl});`;
+                    temp['title']=post.title.rendered;
+                    temp['excerpt']=post.excerpt.rendered;
+                    temp['date'] = formatedDate;
+
+                    data.unshift(temp);
+            });
+          }
+
+
         });
+
         resolve(data);
       });
   });

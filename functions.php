@@ -832,7 +832,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5b3b643cc4672',
-			'label' => 'Pillers',
+			'label' => 'Pillars',
 			'name' => '',
 			'type' => 'tab',
 			'instructions' => '',
