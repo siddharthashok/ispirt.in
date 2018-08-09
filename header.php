@@ -30,7 +30,7 @@
     <div id="top-navigation">
       <div class="logo">
 				<a href="<?php echo site_url(); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/ispirt.svg" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/isprit_logo.svg" alt="">
 				</a>
       </div>
 			<div id="hamburger">

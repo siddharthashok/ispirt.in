@@ -91,7 +91,10 @@ a {
   box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.1); }
   #top-navigation .logo {
     float: left;
-    padding: 17px 40px; }
+    padding: 10px 40px 11px 40px; }
+    #top-navigation .logo img {
+      width: 140px;
+      height: auto; }
   #top-navigation .the-navigation {
     float: right;
     padding: 0px 10px; }
@@ -759,8 +762,10 @@ blockquote {
   #top-navigation {
     height: 60px; }
   #top-navigation .logo {
-    padding: 16px 20px;
+    padding: 9px 20px;
     max-width: 160px; }
+    #top-navigation .logo img {
+      width: 100%; }
   #top-navigation .the-navigation {
     position: fixed;
     height: auto;

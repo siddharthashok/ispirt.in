@@ -64,7 +64,7 @@ Designed and developed by <a href="#">GrandWorks</a>
 				</div>
 				<div class="medium-6 cell foot foot2">
 					<div class="wrap">
-						<a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/ispirt-white.svg" alt=""> </a>
+						<a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/isprit_logo_white.svg" alt=""> </a>
 					</div>
 				</div>
 			</div>

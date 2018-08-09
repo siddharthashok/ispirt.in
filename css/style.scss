@@ -53,7 +53,9 @@ a {@include type-link();
 [v-cloak] {display: none;}
 
 #top-navigation {background: #ffffff; width: 100%; height: 80px; position: fixed; top: 0px; left: 0px; z-index: 999; box-shadow: 0px 2px 32px 0px rgba(0, 0, 0, 0.1);
-  .logo {float: left; padding: 17px 40px;}
+  .logo {float: left; padding: 10px 40px 11px 40px;
+    img {width: 140px; height: auto;}
+  }
   .the-navigation {float: right; padding: 0px 10px;
     ul {list-style: none; margin: 0px; text-align: right;
       li {float: left; margin-right: 30px;position: relative;
@@ -284,7 +286,9 @@ blockquote {border-left: 10px solid #cacaca;}
   .grid-padding-x > .cell {padding-left: 30px; padding-right: 30px;}
 
   #top-navigation {height: 60px;}
-  #top-navigation .logo {padding: 16px 20px; max-width: 160px;}
+  #top-navigation .logo {padding: 9px 20px; max-width: 160px;
+    img {width: 100%;}
+  }
   #top-navigation .the-navigation {position: fixed; height: auto; min-height: calc(100% - 60px); width: 100%; background: rgba(255, 255, 255, 1); top: 60px; padding: 0px; display: none;}
   #top-navigation .the-navigation ul li {width: 100%; float: none; text-align: left; margin-right: 0px;
     &.menu-item-has-children a {background-image: url("img/down-arrow.svg"); background-size: 20px; background-repeat: no-repeat; background-position: calc(100% - 20px) center;}
