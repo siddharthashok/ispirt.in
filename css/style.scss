@@ -48,7 +48,9 @@ a {@include type-link();
   border: none; background: #ffffff; box-shadow: 0 0 5px #dcdcdc;
 }
 
-.button { background: #FF7F34; color: #ffffff; font-size: 18px; font-weight: 600; padding: 12px 20px; border-radius: 5px;}
+.button { background: #FF7F34; color: #ffffff; font-size: 18px; font-weight: 600; padding: 12px 20px; border-radius: 5px;
+  :hover {background: #da6d26;}
+}
 
 [v-cloak] {display: none;}
 
@@ -73,7 +75,7 @@ a {@include type-link();
 #top-navigation .the-navigation ul li:hover ul.sub-menu {display: block;}
 #hamburger {display: none;}
 
-#top-header {width: 100%; height: 100vh; min-height: 800px;
+#top-header {width: 100%; height: 100vh; min-height: 850px;
   .grid-x {height: 100%;}
   .left-content { height: 100%; padding-top: 80px; position: relative; background: #F2FDFF; display: flex; flex-direction: column; justify-content: center;
     .intro-text {padding: 40px; border-bottom: 2px solid #CDF0F7; flex: 1;
@@ -135,15 +137,14 @@ a {@include type-link();
 
   }
   .image-wrap {width: 100%; padding-top: 100%; position: relative; background-size: cover; border-radius: 50%; z-index: 1; overflow: hidden;
-    &:after {content: ""; position: absolute; width: 44px; height: 45px; background-image: url("img/play-black.svg"); top: 50px; left:calc(50% - 22px); z-index: -1;}
-    &:before {content: ""; position: absolute; width: 100%; height: 100%; background:#FFFFFF; top: 0px; left:0px; z-index: -2; opacity: 0.8;}
+    &:after {content: ""; position: absolute; width: 44px; height: 45px; background-image: url("img/play-black.svg"); top: calc(50% - 22px); left:calc(50% - 22px); z-index: -1;}
+    &:before {content: ""; position: absolute; width: 100%; height: 100%; background:#FFFFFF; top: 0px; left:0px; z-index: -2; opacity: 0.7;}
     .text-wrap {position: absolute; width: 100%; bottom: 0px; left: 0px; padding: 0px 40px 40px 40px;
-      h4 {@include type-link(); margin-bottom: 0px; text-align: center;}
+      h4 {@include type-link(); margin-bottom: 0px; text-align: center; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
     }
     &:hover {
-
-      &:after {background-image: url("img/play.svg"); background-size: 44px 45px;}
-      &:before {background:#FF7F34; opacity: 0.9; transition: all 0.5s ease;}
+      &:after {background-image: url("img/play.svg"); background-size: 62px 70px; width: 64px; height: 64px; top: calc(50% - 32px); left: calc(50% - 32px);}
+      &:before {background:#FF7F34; opacity: 0.7; transition: all 0.5s ease;}
       .text-wrap {
         h4 {color: #ffffff;}
       }

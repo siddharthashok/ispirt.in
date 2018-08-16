@@ -141,75 +141,27 @@ get_header();
             <div class="clearfix"></div>
           </div>
 
-<?php
+          <div class="medium-4 cell" v-for="post in posts" v-cloak>
+            <div class="wrap">
+              <a :href="post.link" target="_blank"><div class="image-wrap" :style="post.imgSrc"></div></a>
+              <div class="content-wrap">
+              <div class="title">
+                <a :href="post.link" target="_blank"><h4 v-html="post.title"></h4></a>
+              </div>
 
-  //  $base_url = 'http://pn.ispirt.in';
-  //  $url = 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3';
-  //  $response = wp_remote_get( 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3&_embed' );
-  //  $posts = json_decode(wp_remote_retrieve_body( $response ));
-  //
-  //  if(empty($posts))
-  //  {
-  //    return;
-  //  }
-  //
-  // foreach($posts as $post)
-  // {
-  //   $date=date_create($post->date);
-  //   $url=$base_url."/wp-json/wp/v2/media/".$post->featured_media;
-  //   $medias = wp_remote_get($url);
-  //   $mediasArr = json_decode(wp_remote_retrieve_body( $medias ));
-?>
+              <div class="meta">
 
-<!-- <div class="medium-4 cell">
-  <div class="wrap">
-  <div class="image-wrap" style="background-image:url('<?php echo $mediasArr->media_details->sizes->medium_large->source_url; ?>');"></div>
-  <div class="content-wrap">
-    <div class="title">
-      <h4><?php print_r($post->title->rendered); ?></h4>
-    </div>
-    <div class="meta">
-      <span><?php echo date_format($date,'F d, Y'); ?></span>
-    </div>
-    <?php echo $post->excerpt->rendered; ?>
-    <a href="<?php echo $post->link; ?>" target="_blank">Read more</a>
-  </div>
-</div>
+                <span>{{post.date}}</span>
 
-</div> -->
+              </div>
 
-<?php
-  // }
+              <div class="excerpt" v-html="post.excerpt"></div>
 
-?>
+              <a :href="post.link" target="_blank">Read more</a>
 
-<div class="medium-4 cell" v-for="post in posts" v-cloak>
+            </div>
 
-  <div class="wrap">
-
-  <a :href="post.link" target="_blank"><div class="image-wrap" :style="post.imgSrc"></div></a>
-
-  <div class="content-wrap">
-
-    <div class="title">
-
-      <a :href="post.link" target="_blank"><h4 v-html="post.title"></h4></a>
-
-    </div>
-
-    <div class="meta">
-
-      <span>{{post.date}}</span>
-
-    </div>
-
-    <div class="excerpt" v-html="post.excerpt"></div>
-
-    <a :href="post.link" target="_blank">Read more</a>
-
-  </div>
-
-</div>
+          </div>
 
 
         </div>
@@ -221,12 +173,12 @@ get_header();
         <div class="grid-x grid-padding-x" id="youtube-wrap">
           <div class="large-12 cell">
             <h2>Latest Videos</h2>
-            <a href="http://pn.ispirt.in/" target="_blank" class="button">Follow us on Youtube</a>
+            <a href="https://www.youtube.com/channel/UCsOXbdxeADMkQ22eWOIcylg" target="_blank" class="button">Follow us on Youtube</a>
             <div class="clearfix"></div>
           </div>
 
           <div class="medium-3 cell" v-for="yPost in yPosts">
-           <a :href="yPost.youtubeVideoLink">
+           <a :href="yPost.youtubeVideoLink" target="_blank">
              <div class="image-wrap" :style="yPost.youtubeImgSrc">
                <div class="text-wrap">
                  <h4>{{yPost.youtubeTitle}}</h4>
@@ -234,44 +186,6 @@ get_header();
              </div>
            </a>
          </div>
-
-
-          <!-- <div class="medium-3 cell">
-            <a href="#">
-            <div class="image-wrap" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/i1.jpg');">
-              <div class="text-wrap">
-                <h4>Cupcake ipsum dolor sit amet chocolate bar.</h4>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="medium-3 cell">
-            <a href="#">
-            <div class="image-wrap" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/i1.jpg');">
-              <div class="text-wrap">
-                <h4>Cupcake ipsum dolor sit amet chocolate bar.</h4>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="medium-3 cell">
-            <a href="#">
-            <div class="image-wrap" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/i1.jpg');">
-              <div class="text-wrap">
-                <h4>Cupcake ipsum dolor sit amet chocolate bar.</h4>
-              </div>
-            </div>
-            </a>
-          </div>
-          <div class="medium-3 cell">
-            <a href="#">
-            <div class="image-wrap" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/i1.jpg');">
-              <div class="text-wrap">
-                <h4>Cupcake ipsum dolor sit amet chocolate bar.</h4>
-              </div>
-            </div>
-            </a>
-          </div> -->
       </div>
       </div>
     </div>

@@ -76,6 +76,8 @@ a {
   font-weight: 600;
   padding: 12px 20px;
   border-radius: 5px; }
+  .button :hover {
+    background: #da6d26; }
 
 [v-cloak] {
   display: none; }
@@ -136,7 +138,7 @@ a {
 #top-header {
   width: 100%;
   height: 100vh;
-  min-height: 800px; }
+  min-height: 850px; }
   #top-header .grid-x {
     height: 100%; }
   #top-header .left-content {
@@ -345,7 +347,7 @@ a {
       width: 44px;
       height: 45px;
       background-image: url("img/play-black.svg");
-      top: 50px;
+      top: calc(50% - 22px);
       left: calc(50% - 22px);
       z-index: -1; }
     #videos .image-wrap:before {
@@ -357,7 +359,7 @@ a {
       top: 0px;
       left: 0px;
       z-index: -2;
-      opacity: 0.8; }
+      opacity: 0.7; }
     #videos .image-wrap .text-wrap {
       position: absolute;
       width: 100%;
@@ -374,13 +376,21 @@ a {
         margin: 0px;
         text-decoration: underline;
         margin-bottom: 0px;
-        text-align: center; }
+        text-align: center;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
     #videos .image-wrap:hover:after {
       background-image: url("img/play.svg");
-      background-size: 44px 45px; }
+      background-size: 62px 70px;
+      width: 64px;
+      height: 64px;
+      top: calc(50% - 32px);
+      left: calc(50% - 32px); }
     #videos .image-wrap:hover:before {
       background: #FF7F34;
-      opacity: 0.9;
+      opacity: 0.7;
       transition: all 0.5s ease; }
     #videos .image-wrap:hover .text-wrap h4 {
       color: #ffffff; }
