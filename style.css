@@ -76,8 +76,8 @@ a {
   font-weight: 600;
   padding: 12px 20px;
   border-radius: 5px; }
-  .button :hover {
-    background: #da6d26; }
+  .button:hover {
+    background: #e66214; }
 
 [v-cloak] {
   display: none; }
@@ -109,7 +109,7 @@ a {
         margin-right: 30px;
         position: relative; }
         #top-navigation .the-navigation ul li a {
-          padding: 25px 0px;
+          padding: 27px 0px 23px 0px;
           display: inline-block; }
       #top-navigation .the-navigation ul ul.sub-menu {
         position: absolute;
@@ -750,6 +750,27 @@ article {
 
 blockquote {
   border-left: 10px solid #cacaca; }
+
+#volunteer-form.reveal {
+  border: 0px;
+  background-image: url("img/newsletter.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px; }
+  #volunteer-form.reveal h3 {
+    margin-bottom: 30px; }
+  #volunteer-form.reveal label {
+    font-size: 18px;
+    line-height: 40px; }
+    #volunteer-form.reveal label br {
+      display: none; }
+  #volunteer-form.reveal textarea {
+    margin-bottom: 30px; }
+  #volunteer-form.reveal .button {
+    margin-bottom: 0px; }
+
+.close-button {
+  color: #000000; }
 
 @media print, screen and (min-width: 1281px) {
   .grid-padding-x > .cell {

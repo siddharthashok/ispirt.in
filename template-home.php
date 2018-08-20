@@ -266,8 +266,20 @@ get_header();
       <div class="large-6 cell">
         <div class="details-wrap">
           <p>We need great talent, help us improve India. <br>Together we can achieve great things!</p>
-          <a href="#" class="button">Apply Now</a>
+          <a href="#" class="button" data-open="volunteer-form">Apply Now</a>
         </div>
+
+
+        <div class="reveal" id="volunteer-form" data-reveal>
+          <h3>Volunteer With iSPIRT</h3>
+
+          <!-- <?php echo do_shortcode('[contact-form-7 id="2039" title="Volunteer form"]'); ?> -->
+          <?php echo do_shortcode('[contact-form-7 id="1790" title="Contact form 1"]'); ?>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
