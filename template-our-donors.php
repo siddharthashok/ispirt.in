@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Our People
+ * Template Name: Our Donors
  *
  * This is the template that displays Home page
  *
@@ -58,29 +58,61 @@
 
               <?php
 
-                  if( have_rows('core_volunteers') ):
+                  if( have_rows('founders_circle') ):
                     ?>
                     <div class="large-12 cell">
-                      <h3>CORE VOLUNTEERS</h3>
-                      <p><?php the_field('core_volunteer_description')?></p>
+                      <h3>FOUNDERS CIRCLE</h3>
+                      <p><?php the_field('founders_circle_description')?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('core_volunteers') ) : the_row();
+                      while ( have_rows('founders_circle') ) : the_row();
 
                         $name = get_sub_field('name');
                         $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
                         $image = get_sub_field('image');
                       ?>
-                      <div class="medium-3 small-6 cell">
+                      <div class="medium-4 small-6 cell">
                         <a href="<?php echo $profile_link; ?>" target="_blank">
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
+
+                        </div>
+                        </a>
+                      </div>
+                  <?php
+                      endwhile;
+
+                  else :
+
+                      // no rows found
+
+                  endif;
+
+
+
+
+                  if( have_rows('product_circle') ):
+                    ?>
+                    <div class="large-12 cell padding-top">
+                      <h3>PRODUCT CIRCLE DONORS</h3>
+                      <p><?php the_field('product_circle_description')?></p>
+                    </div>
+                    <?php
+                   	// loop through the rows of data
+                      while ( have_rows('product_circle') ) : the_row();
+
+                        $name = get_sub_field('name');
+                        $profile_link = get_sub_field('profile_link');
+                        $image = get_sub_field('image');
+                      ?>
+                      <div class="medium-4 small-6 cell">
+                        <a href="<?php echo $profile_link; ?>" target="_blank">
+                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                          <div class="name">
+                            <?php echo $name; ?>
                           </div>
                         </div>
                         </a>
@@ -97,30 +129,27 @@
 
 
 
-                  if( have_rows('volunteers') ):
+                  if( have_rows('fellowship_donors') ):
                     ?>
                     <div class="large-12 cell padding-top">
-                      <h3>VOLUNTEERS</h3>
-                      <p><?php the_field('volunteers_description')?></p>
+                      <h3>Fellowship Donors</h3>
+                      <p><?php the_field('fellowship_donors_description')?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('volunteers') ) : the_row();
+                      while ( have_rows('fellowship_donors') ) : the_row();
 
                         $name = get_sub_field('name');
                         $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
                         $image = get_sub_field('image');
                       ?>
-                      <div class="medium-3 small-6 cell">
+                      <div class="medium-4 small-6 cell">
                         <a href="<?php echo $profile_link; ?>" target="_blank">
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
-                          </div>
+
                         </div>
                         </a>
                       </div>
@@ -133,33 +162,22 @@
 
                   endif;
 
-
-
-
-                  if( have_rows('alumni') ):
+                  if( have_rows('financial_inclusion') ):
                     ?>
                     <div class="large-12 cell padding-top">
-                      <h3>Alumni</h3>
-                      <p><?php the_field('alumni_description')?></p>
+                      <h3>Financial Inclusion Donors</h3>
+                      <p><?php the_field('financial_inclusion_description')?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('alumni') ) : the_row();
+                      while ( have_rows('financial_inclusion') ) : the_row();
 
-                        $name = get_sub_field('name');
                         $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
                         $image = get_sub_field('image');
                       ?>
-                      <div class="medium-3 small-6 cell">
+                      <div class="medium-4 small-6 cell">
                         <a href="<?php echo $profile_link; ?>" target="_blank">
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
-                          <div class="name">
-                            <?php echo $name; ?>
-                          </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
-                          </div>
                         </div>
                         </a>
                       </div>

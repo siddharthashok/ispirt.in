@@ -95,35 +95,32 @@ get_header();
             <div class="wrap">
               <div class="number">1.</div>
               <h3>Policy</h3>
-              <p>Policy Hacks aimed demystifying policy for better understanding and use of policy by Software product industry, especially the young entrepreneurs or startups.</p>
-              <a href="#">Read more</a>
+              <p><?php the_field('policy'); ?></p>
+              <a href="<?php the_field('policy_link'); ?>">Read more</a>
             </div>
           </div>
           <div class="large-3 cell">
             <div class="wrap">
               <div class="number">2.</div>
               <h3>Playbook</h3>
-              <p>Policy Hacks aimed demystifying policy for better understanding and use of policy by Software product industry, especially the young entrepreneurs or startups.</p>
-              <a href="#">Read more</a>
+              <p><?php the_field('playbook'); ?></p>
+              <a href="<?php the_field('playbook_link'); ?>">Read more</a>
             </div>
           </div>
           <div class="large-3 cell">
             <div class="wrap">
               <div class="number">3.</div>
               <h3>Market Catalysts</h3>
-              <p>Policy Hacks aimed demystifying policy for better understanding and use of policy by Software product industry, especially the young entrepreneurs or startups.</p>
-              <a href="#">Read more</a>
+              <p><?php the_field('market_catalysts'); ?></p>
+              <a href="<?php the_field('market_catalysts_link'); ?>">Read more</a>
             </div>
           </div>
           <div class="large-3 cell">
             <div class="wrap">
               <div class="number">4.</div>
               <h3>Platform</h3>
-              <p>Global Lean Sales, and by
-              Selling your software we
-              online to global markets, without field-force SaaS has changed the #PlaybookRT.
-              Right sounds good?</p>
-              <a href="#">Read more</a>
+              <p><?php the_field('platform'); ?></p>
+              <a href="<?php the_field('platform_link'); ?>">Read more</a>
             </div>
           </div>
         </div>
@@ -225,29 +222,40 @@ get_header();
       <div class="large-6 cell">
         <h2>Key Initiatives</h2>
         <div class="initiatives">
+          <?php
+
+          // check if the repeater field has rows of data
+          if( have_rows('initiative') ):
+
+           	// loop through the rows of data
+              while ( have_rows('initiative') ) : the_row();
+
+          ?>
+
           <div class="initiative" data-equalizer data-equalize-on="medium">
             <div class="logo-wrap" data-equalizer-watch>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/indiastack.svg" alt="">
+              <img src="<?php the_sub_field('logo'); ?>" alt="">
             </div>
             <div class="details-wrap" data-equalizer-watch>
               <div class="wrap">
-                <p>Technology for 1.2 Billion Indians</p>
-                <a href="#" class="button">Vsit Website</a>
+                <p><?php the_sub_field('details'); ?></p>
+                <a href="<?php the_sub_field('link'); ?>" class="button" target="_blank">Vsit Website</a>
               </div>
             </div>
           </div>
 
-          <div class="initiative" data-equalizer data-equalize-on="medium">
-            <div class="logo-wrap" data-equalizer-watch>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/intech50.svg" alt="">
-            </div>
-            <div class="details-wrap" data-equalizer-watch>
-              <div class="wrap">
-                <p>Showcasing the most promising software products created by entrepreneurs from India</p>
-                <a href="#" class="button">Vsit Website</a>
-              </div>
-            </div>
-          </div>
+          <?php
+
+              endwhile;
+
+          else :
+
+              // no rows found
+
+          endif;
+
+          ?>
+          
         </div>
       </div>
     </div>
