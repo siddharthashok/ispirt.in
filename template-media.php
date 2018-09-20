@@ -40,7 +40,7 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 					<main id="main" class="site-main">
 					<?php $args = array('post_type' => 'news','posts_per_page' => -1);?>
             			<?php $loop = new WP_Query($args);?>
-						<div class="news-wrap" id="media-news">
+						<div class="news-wrap media" id="media-news">
 							<ul>
 								<?php if ( $loop->have_posts() ) {
 									while ( $loop->have_posts() ) {
@@ -48,14 +48,14 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 								?>
 								<li>
 									<a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
-									<div class="meta">
-										<p>
-											<?php if(!get_field('news_date'))
-													{
-														echo date('F d, Y');
-													}  
-											?>
-										</p>
+									<div class="news-meta">
+										<?php 
+											echo "<div class='news-date'>". get_field('date') . "</div>";
+											if(get_field('news_source'))
+											{
+												echo "<div class='news-source'>". get_field('news_source'). "</div>";
+											}  
+										?>
 									</div>
 								</li>
 								<?
