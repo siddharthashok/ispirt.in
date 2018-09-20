@@ -295,13 +295,17 @@ blockquote {border-left: 10px solid #cacaca;}
   body, p, a {font-size: 16px; line-height: 27px;}
   h2 {font-size: 32px; line-height: 42px; margin-bottom: 30px;}
 
-  .grid-padding-x > .cell {padding-left: 30px; padding-right: 30px;}
+  .grid-padding-x > .cell {padding-left: 15px; padding-right: 15px;}
+
+  .site-footer .foot .wrap{flex-wrap: wrap;}
 
   #top-navigation {height: 60px;}
-  #top-navigation .logo {padding: 9px 20px; max-width: 160px;
+  #top-navigation .logo {padding: 7px 25px; max-width: 150px;
     img {width: 100%;}
+
   }
-  #top-navigation .the-navigation {position: fixed; height: auto; min-height: calc(100% - 60px); width: 100%; background: rgba(255, 255, 255, 1); top: 60px; padding: 0px; display: none;}
+  
+  #top-navigation .the-navigation {position: fixed; height: auto; max-height: calc(100% - 60px); overflow-y: scroll; width: 100%; background: rgba(255, 255, 255, 1); top: 60px; padding: 0px; display: none;}
   #top-navigation .the-navigation ul li {width: 100%; float: none; text-align: left; margin-right: 0px;
     &.menu-item-has-children a {background-image: url("img/down-arrow.svg"); background-size: 20px; background-repeat: no-repeat; background-position: calc(100% - 20px) center;}
   }
@@ -368,4 +372,67 @@ blockquote {border-left: 10px solid #cacaca;}
   article p, article a {font-size: 16px; line-height: 28px; margin-bottom: 20px;}
 
   blockquote {border-left: 7px solid #cacaca;}
+
+  #feed-wrap{.button{margin-top:0px;}}
 }
+
+//For only medium screens
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .intro-text{margin-top: 60px;}
+
+  #videos{.image-wrap .text-wrap{padding-bottom: 5px; padding-left:30px; padding-right: 30px;} .image-wrap::after{width:34px;height:34px;width: 35px;height: 35px;background-position: center;border-radius: 50%;background-size: contain;left: calc(50% - 18px);}}
+  #videos{.button{margin-top:0px;}}
+
+  .site-footer .add.add2 {padding-top: 60px;}
+  .site-footer .foot.foot1 {padding: 30px 30px;}
+  .site-footer .foot .wrap{h3{margin-right: 0px; margin-bottom: 10px;}}
+  #pillers{padding: 60px 0px 60px 0px; .cell:last-child{margin-bottom: 0px;};}
+  #blog{padding: 60px 0px 60px 0px;}
+  #news-key-initiatives{padding: 60px 0px 60px 0px;}
+  #volunteer{padding: 60px 0px 60px 0px;}
+  #videos {padding: 60px 0px 80px 0px;}
+  .content-area{margin-bottom: 60px;}
+}
+
+//For only small screens
+@media screen and (max-width: 39.9375em) {
+  #blog,#videos{.cell{margin-bottom: 30px;}}
+  #blog,#videos{.cell:last-child{margin-bottom: 0px;}}
+  #profile-grid .profile-wrap .name{left:10px; bottom: 10px;}
+  article{padding-right: 0px;}
+  .coel-wrap .coel{.ribbon{flex:10%;}}
+  #videos{display: none;}
+  #blog{padding-bottom: 80px;}
+  #feed-wrap{.button{float: left;} h2{margin-bottom: 20px;}}
+  .content-area{margin-bottom: 80px;}
+
+  //section changes
+  #pillers{padding: 30px 0px 40px 0px; .cell:last-child{margin-bottom: 0px;}}
+  #blog{padding: 40px 0px 40px 0px;}
+  #news-key-initiatives{padding: 40px 0px 40px 0px;}
+  #volunteer{padding: 40px 0px 40px 0px;}
+  .site-footer .newsletter {padding: 30px 30px;}
+  .site-footer .add, .site-footer .add.add1, .site-footer .add.add2 {padding: 30px 30px;}
+  .content-area {margin-bottom: 40px;}
+  #page-header {margin-bottom: 40px;}
+}
+
+.col-md-6 iframe, .col-md-6 object, .col-md-6 embed{width:100%; height: 400px;}
+
+.col-md-6 iframe{margin-bottom: 30px;}
+
+.col-md-6 iframe:last-child{margin-bottom: 0px;}
+
+.col-md-6 iframe:nth-of-type(1){margin-top: 30px;}
+
+.site-footer .medium-7{.wrap{p a{color:#B1B9C3; &:hover{ color: #FF8231;}}}}
+
+.pull-left{float:left;}
+
+.no-scroll{overflow: hidden;}
+
+.coel{ display: flex; position: relative; .ribbon{background-image: url('img/ribbon.svg');background-position: center;background-size: contain;background-repeat: no-repeat;width: 20px;height: 21px;text-align: center;color: white;line-height: normal;font-weight: 700;font-size: 15px; margin: 5px 5px 0px 0px ; flex:5%}; .coe-text{p{font-family: "Poppins", sans-serif; color:black; font-size: 14px; strong{margin-right:5px;}} flex:100%;};}
+
+#search-section,#our-donors-search{h3{margin-bottom:10px;} input{margin-bottom: 40px;}}
+
+#media-news.news-wrap{ul{list-style: none; margin:0px; li{width: 100%;border-bottom: 2px solid #CDF0F7;margin-bottom: 16px;}}}

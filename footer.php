@@ -24,7 +24,7 @@
 							<div class="clearfix"></div>
 						</form>
 						<p>Get notified of new updates and events from us.<br>
-						We respect <a href="#">your privacy</a>.</p>
+						We respect <a href="<?php echo get_site_url()?>/privacy-policy">your privacy</a>.</p>
 					</div>
 				</div>
 			</div>
@@ -54,9 +54,9 @@ Designed and developed by <a href="#">GrandWorks</a>
 						<h3>Follow</h3>
 						<div class="social">
 							<ul>
-								<li> <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt=""> </a> </li>
-								<li> <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt=""> </a> </li>
-								<li> <a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin.svg" alt=""> </a> </li>
+								<li> <a href="https://www.facebook.com/ProductNation.in/" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt=""> </a> </li>
+								<li> <a href="http://twitter.com/@product_nation" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt=""> </a> </li>
+								<li> <a href="http://www.linkedin.com/company/3117368?trk=tyah&trkInfo=tas%3Aispirt%2Cidx%3A2-1-2" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin.svg" alt=""> </a> </li>
 							</ul>
 						</div>
 						<div class="cleartrip"></div>
@@ -64,7 +64,7 @@ Designed and developed by <a href="#">GrandWorks</a>
 				</div>
 				<div class="medium-6 cell foot foot2">
 					<div class="wrap">
-						<a href="#"> <img src="<?php echo get_template_directory_uri(); ?>/img/isprit_logo_white.svg" alt=""> </a>
+						<a href="<?php echo get_site_url();?>"> <img src="<?php echo get_template_directory_uri(); ?>/img/isprit_logo_white.svg" alt=""> </a>
 					</div>
 				</div>
 			</div>

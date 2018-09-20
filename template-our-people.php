@@ -36,6 +36,88 @@
  		<div class="grid-container">
  			<div class="grid-x grid-padding-x">
  				<div class="large-9 cell">
+            <!-- Code Of Ethics -->
+            <section id="code-of-ethics-level">
+              
+                <div class="grid-x">
+                  <div class="cell large-12">
+                    <div class="coel-wrap">
+                      <div class="coel">
+                        <div class="ribbon">
+                          1
+                        </div>
+                        <div class="coe-text">
+                          <p>
+                          <strong>Level 1.</strong>  As an iSPIRT Volunteer, I am committed to making India a Product Nation. At no point in time, will I use my volunteer status with iSPIRT to put my personal or business interest, ahead of iSPIRT interests.  Hope to set a high ethical standard and be an example to others. 
+                          </p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Level 1 End -->
+                  <div class="cell large-12">
+                    <div class="coel-wrap">
+                      <div class="coel">
+                        <div class="ribbon">
+                          2
+                        </div>
+                        <div class="coe-text">
+                          <p>
+                          <strong>Level 2.</strong>  To maintain the integrity of the iSPIRT curation process, I shall disclose to others any interest in participating companies. 
+                          </p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- level 2 end -->
+
+                  <div class="cell large-12">
+                    <div class="coel-wrap">
+                      <div class="coel">
+                        <div class="ribbon">
+                          3
+                        </div>
+                        <div class="coe-text">
+                          <p>
+                          <strong>Level 3.</strong>  At no point in time, I expect any payback in any form, including advisory or sweat equity, from any startups benefiting from my pay-forward contributions through iSPIRT.
+                          </p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Level 3 end -->
+                  <div class="cell large-12">
+                    <div class="coel-wrap">
+                      <div class="coel">
+                        <div class="ribbon">
+                          4
+                        </div>
+                        <div class="coe-text">
+                          <p>
+                          <strong>Level 4.</strong>  India's interest comes before my private interests. I will not become an angel investor in any startups that might benefit from my specific policy advocacy efforts.
+                          </p> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+             
+            </section>
+          <!--  Code Of Ethics End-->
+          
+           <!--Search section-->
+          <section id="search-section">
+              <div class="grid-x">
+                <div class="cell large-12">
+                  <h3>Search</h3>
+                  <input type="text" name="search-box" id="people-search" placeholder="Type search keyword">
+                </div>
+              </div>
+          </section>
+          <!-- End of Search section-->
+
  					<main id="main" class="site-main">
  					<?php
  					while ( have_posts() ) :
@@ -48,9 +130,6 @@
  								the_content();
  								?>
  							</div><!-- .entry-content -->
-
-
-
 
 
               <div class="grid-x grid-padding-x" id="profile-grid">
@@ -157,9 +236,11 @@
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
-                          </div>
+                          <?php if($code_of_ethics_level){?>
+                            <div class="coe-level">
+                              <?php echo $code_of_ethics_level; ?>
+                            </div>
+                          <?php }?>
                         </div>
                         </a>
                       </div>

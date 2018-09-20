@@ -37,6 +37,15 @@
  			<div class="grid-x grid-padding-x">
  				<div class="large-9 cell">
  					<main id="main" class="site-main">
+           <!-- Search Box -->
+           <section id="our-donors-search">
+            <div class="grid-x">
+                  <div class="cell large-12">
+                    <h3>Search</h3>
+                    <input type="text" name="search-box" id="donors-search" placeholder="Type search keyword">
+                  </div>
+              </div>
+            </section>
  					<?php
  					while ( have_posts() ) :
  						the_post();
