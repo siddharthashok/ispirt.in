@@ -382,7 +382,7 @@ blockquote {border-left: 10px solid #cacaca;}
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .intro-text{margin-top: 60px;}
 
-  #videos{.image-wrap .text-wrap{padding-bottom: 5px; padding-left:30px; padding-right: 30px;} .image-wrap::after{width:34px;height:34px;width: 35px;height: 35px;background-position: center;border-radius: 50%;background-size: contain;left: calc(50% - 18px);}}
+  #videos{.image-wrap .text-wrap{bottom: -27px; padding-left:20px; padding-right: 20px; h4{font-size:14px;};}; .image-wrap::after{width:34px;height:34px;width: 35px;height: 35px;background-position: center;border-radius: 50%;background-size: contain;left: calc(50% - 18px);}}
   #videos{.button{margin-top:0px;}}
 
   .site-footer .add.add2 {padding-top: 60px;}
@@ -395,6 +395,8 @@ blockquote {border-left: 10px solid #cacaca;}
   #videos {padding: 60px 0px 80px 0px;}
   .content-area{margin-bottom: 60px;}
   #code-of-ethics-level{margin-bottom: 60px;}
+  //#media-news.news-wrap{ul li:last-child{margin-bottom: 60px !important;}}
+  #secondary{margin-top: 40px;}
 }
 
 //For only small screens
@@ -409,6 +411,8 @@ blockquote {border-left: 10px solid #cacaca;}
   #feed-wrap{.button{float: left;} h2{margin-bottom: 20px;}}
   .content-area{margin-bottom: 80px;}
 
+  //#media-news.news-wrap{ul li:last-child{margin-bottom: 40px !important;}}
+
   //section changes
   #pillers{padding: 30px 0px 40px 0px; .cell:last-child{margin-bottom: 0px;}}
   #blog{padding: 40px 0px 40px 0px;}
@@ -419,6 +423,7 @@ blockquote {border-left: 10px solid #cacaca;}
   .content-area {margin-bottom: 40px;}
   #page-header {margin-bottom: 40px;}
   #code-of-ethics-level{margin-bottom: 40px;}
+  #secondary{margin-top: 20px;}
 }
 
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed{width:100%; height: 400px;}

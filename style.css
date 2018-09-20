@@ -1276,9 +1276,12 @@ blockquote {
   }
 
   #videos .image-wrap .text-wrap {
-    padding-bottom: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+    bottom: -27px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #videos .image-wrap .text-wrap h4 {
+    font-size: 14px;
   }
   #videos .image-wrap::after {
     width: 34px;
@@ -1337,6 +1340,10 @@ blockquote {
 
   #code-of-ethics-level {
     margin-bottom: 60px;
+  }
+
+  #secondary {
+    margin-top: 40px;
   }
 }
 @media screen and (max-width: 39.9375em) {
@@ -1417,6 +1424,10 @@ blockquote {
 
   #code-of-ethics-level {
     margin-bottom: 40px;
+  }
+
+  #secondary {
+    margin-top: 20px;
   }
 }
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed {
