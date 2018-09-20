@@ -1510,26 +1510,8 @@ blockquote {
   margin-bottom: 16px;
 }
 
-.news-wrap.media .news-meta {
-  margin: 10px 0px 10px 0px;
-}
-.news-wrap.media .news-meta .news-date {
-  margin-bottom: 10px;
-}
-.news-wrap.media a {
-  color: #3E6770;
-  font-family: "Archivo Narrow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 27px;
-}
-.news-wrap.media a {
-  font-size: 22px;
-  color: #000000;
-}
-.news-wrap.media a:hover {
-  text-decoration-color: #FF8231;
+.news-source {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
