@@ -909,6 +909,10 @@ blockquote {
   color: #000000;
 }
 
+#code-of-ethics-level {
+  margin-bottom: 80px;
+}
+
 @media print, screen and (min-width: 1281px) {
   .grid-padding-x > .cell {
     padding-right: 25px;
@@ -1330,6 +1334,10 @@ blockquote {
   .content-area {
     margin-bottom: 60px;
   }
+
+  #code-of-ethics-level {
+    margin-bottom: 60px;
+  }
 }
 @media screen and (max-width: 39.9375em) {
   #blog .cell, #videos .cell {
@@ -1404,6 +1412,10 @@ blockquote {
   }
 
   #page-header {
+    margin-bottom: 40px;
+  }
+
+  #code-of-ethics-level {
     margin-bottom: 40px;
   }
 }
@@ -1485,6 +1497,28 @@ blockquote {
   width: 100%;
   border-bottom: 2px solid #CDF0F7;
   margin-bottom: 16px;
+}
+
+.news-wrap.media .news-meta {
+  margin: 10px 0px 10px 0px;
+}
+.news-wrap.media .news-meta .news-date {
+  margin-bottom: 10px;
+}
+.news-wrap.media a {
+  color: #3E6770;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+}
+.news-wrap.media a {
+  font-size: 22px;
+  color: #000000;
+}
+.news-wrap.media a:hover {
+  text-decoration-color: #FF8231;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2100,3 +2100,9 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+
+add_filter('acf/load_field/name=date', 'my_acf_default_date');
+function my_acf_default_date($field) {
+  $field['default_value'] = date('F d, Y');
+  return $field;
+}

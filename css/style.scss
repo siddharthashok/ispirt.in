@@ -279,6 +279,8 @@ blockquote {border-left: 10px solid #cacaca;}
 
 .close-button {color: #000000;}
 
+#code-of-ethics-level{margin-bottom: 80px;}
+
 // For large screens
 
 @media print, screen and (min-width: 1281px) {
@@ -392,6 +394,7 @@ blockquote {border-left: 10px solid #cacaca;}
   #volunteer{padding: 60px 0px 60px 0px;}
   #videos {padding: 60px 0px 80px 0px;}
   .content-area{margin-bottom: 60px;}
+  #code-of-ethics-level{margin-bottom: 60px;}
 }
 
 //For only small screens
@@ -415,6 +418,7 @@ blockquote {border-left: 10px solid #cacaca;}
   .site-footer .add, .site-footer .add.add1, .site-footer .add.add2 {padding: 30px 30px;}
   .content-area {margin-bottom: 40px;}
   #page-header {margin-bottom: 40px;}
+  #code-of-ethics-level{margin-bottom: 40px;}
 }
 
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed{width:100%; height: 400px;}
@@ -436,3 +440,13 @@ blockquote {border-left: 10px solid #cacaca;}
 #search-section,#our-donors-search{h3{margin-bottom:10px;} input{margin-bottom: 40px;}}
 
 #media-news.news-wrap{ul{list-style: none; margin:0px; li{width: 100%;border-bottom: 2px solid #CDF0F7;margin-bottom: 16px;}}}
+
+.news-wrap.media{
+  .news-meta{
+    margin: 10px 0px 10px 0px;
+    .news-date{margin-bottom: 10px;}
+  }
+  a{@include type-regular();}
+  a{font-size: 22px; color: #000000;}
+  a:hover{text-decoration-color: #FF8231;}
+}
