@@ -167,11 +167,33 @@ function getYoutubeData()
 // Menu open-close JS
 
 $("#hamburger").click(function(event) {
-	 $("#top-navigation").toggleClass("open");
+   $("#top-navigation").toggleClass("open");
+   $("body").toggleClass("no-scroll");
  });
 
 // foundation init
 
 $(document).foundation();
 
+});
+
+
+// Jquery Filter
+
+$(document).ready(function(){
+  $("#people-search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#profile-grid .medium-3").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+$(document).ready(function(){
+  $("#donors-search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#profile-grid .medium-4").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
 });

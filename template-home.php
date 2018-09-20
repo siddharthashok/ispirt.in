@@ -195,8 +195,31 @@ get_header();
         <h2>In The News</h2>
 
         <div class="news-wrap">
+        <?php $args = array('post_type' => 'news','posts_per_page' => 4);?>
+            <?php $loop = new WP_Query($args);?>
           <ul>
+              <?php if ( $loop->have_posts() ) {
+                  while ( $loop->have_posts() ) {
+                    $loop->the_post();    
+              ?>
             <li>
+              <a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
+              <div class="meta">
+                <p>
+                  <?php if(!get_field('news_date'))
+                        {
+                            echo date('F d, Y');
+                        }  
+                  ?>
+                </p>
+              </div>
+            </li>
+            <?
+                  }
+                }
+                wp_reset_postdata();
+            ?>
+            <!-- <li>
               <a href="#">Banking in the time of non-linear change</a>
               <div class="meta"><p>MARCH 23, 2018</p></div>
             </li>
@@ -207,14 +230,10 @@ get_header();
             <li>
               <a href="#">Banking in the time of non-linear change</a>
               <div class="meta"><p>MARCH 23, 2018</p></div>
-            </li>
-            <li>
-              <a href="#">Banking in the time of non-linear change</a>
-              <div class="meta"><p>MARCH 23, 2018</p></div>
-            </li>
+            </li> -->
           </ul>
 
-          <a href="#" class="button">Show more</a>
+          <a href="<?php echo site_url()?>/media" class="button">Show more</a>
         </div>
 
       </div>
