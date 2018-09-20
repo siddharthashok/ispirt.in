@@ -1135,6 +1135,8 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+if( function_exists('acf_add_local_field_group') ):
+
 acf_add_local_field_group(array(
 	'key' => 'group_5b3b70515afd8',
 	'title' => 'News',
@@ -1158,6 +1160,42 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'maxlength' => '',
 		),
+		array(
+			'key' => 'field_5ba334b95bcc8',
+			'label' => 'News Source',
+			'name' => 'news_source',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5ba334c85bcc9',
+			'label' => 'Date',
+			'name' => 'date',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'F j, Y',
+			'return_format' => 'F j, Y',
+			'first_day' => 1,
+		),
 	),
 	'location' => array(
 		array(
@@ -1173,10 +1211,28 @@ acf_add_local_field_group(array(
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
+	'hide_on_screen' => array(
+		0 => 'permalink',
+		1 => 'the_content',
+		2 => 'excerpt',
+		3 => 'custom_fields',
+		4 => 'discussion',
+		5 => 'comments',
+		6 => 'revisions',
+		7 => 'slug',
+		8 => 'author',
+		9 => 'format',
+		10 => 'page_attributes',
+		11 => 'featured_image',
+		12 => 'categories',
+		13 => 'tags',
+		14 => 'send-trackbacks',
+	),
 	'active' => 1,
 	'description' => '',
 ));
+
+endif;
 
 acf_add_local_field_group(array(
 	'key' => 'group_5b20bc6d33fe5',
