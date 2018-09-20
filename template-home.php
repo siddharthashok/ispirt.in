@@ -195,26 +195,40 @@ get_header();
         <h2>In The News</h2>
 
         <div class="news-wrap">
-        <?php $args = array('post_type' => 'news','posts_per_page' => 4);?>
+        <?php $args = array('post_type' => 'news','posts_per_page' => -1);?>
             <?php $loop = new WP_Query($args);?>
           <ul>
               <?php if ( $loop->have_posts() ) {
+                  $counter = 0;
                   while ( $loop->have_posts() ) {
-                    $loop->the_post();    
+                    $loop->the_post();
+                    
+                    if(get_field('show_on_home_page')==true)
+                    {
+                        $counter++;
               ?>
-            <li>
-              <a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
-              <div class="meta">
-                <p>
-                  <?php if(!get_field('news_date'))
-                        {
-                            echo date('F d, Y');
-                        }  
+                <li>
+                  <a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
+                  <?php 
+                    if(get_field('news_source'))
+                      {
+                        echo "<span class='news-source'> - ". get_field('news_source'). "</span>";
+                      } 
                   ?>
-                </p>
-              </div>
-            </li>
+                  <div class="meta">
+                    <p>
+                      <?php 
+                        echo get_field('date'); 
+                      ?>
+                    </p>
+                  </div>
+                </li>
             <?
+                    }
+                    if($counter==4)
+                    {
+                      break;
+                    }
                   }
                 }
                 wp_reset_postdata();

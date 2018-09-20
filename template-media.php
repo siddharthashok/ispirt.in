@@ -48,14 +48,18 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 								?>
 								<li>
 									<a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
+									<?php 
+										if(get_field('news_source'))
+										{
+											echo "<span class='news-source'> - ". get_field('news_source'). "</span>";
+										}  
+									?>
 									<div class="news-meta">
-										<?php 
-											echo "<div class='news-date'>". get_field('date') . "</div>";
-											if(get_field('news_source'))
-											{
-												echo "<div class='news-source'>". get_field('news_source'). "</div>";
-											}  
-										?>
+										<p>
+											<?php 
+												echo "<div class='news-date'>". get_field('date') . "</div>";
+											?>
+										</p>
 									</div>
 								</li>
 								<?

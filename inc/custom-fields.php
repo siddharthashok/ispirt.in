@@ -722,6 +722,30 @@ if( function_exists('acf_add_local_field_group') ):
                 'return_format' => 'F j, Y',
                 'first_day' => 1,
             ),
+            array(
+                'key' => 'field_5ba37e0b7302a',
+                'label' => 'Show on home page',
+                'name' => 'show_on_home_page',
+                'type' => 'checkbox',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'choices' => array(
+                    'true' => 'Yes',
+                ),
+                'allow_custom' => 0,
+                'default_value' => array(
+                ),
+                'layout' => 'horizontal',
+                'toggle' => 0,
+                'return_format' => 'value',
+                'save_custom' => 0,
+            ),
         ),
         'location' => array(
             array(
