@@ -1342,8 +1342,16 @@ blockquote {
     margin-bottom: 60px;
   }
 
+  #media-news.news-wrap ul li:last-child {
+    margin-bottom: 20px !important;
+  }
+
   #secondary {
     margin-top: 40px;
+  }
+
+  .side-nav {
+    margin-bottom: 60px;
   }
 }
 @media screen and (max-width: 39.9375em) {
@@ -1428,6 +1436,10 @@ blockquote {
 
   #secondary {
     margin-top: 20px;
+  }
+
+  .side-nav {
+    margin-bottom: 40px;
   }
 }
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed {
