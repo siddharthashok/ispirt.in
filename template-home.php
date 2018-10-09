@@ -221,7 +221,7 @@ get_header();
             <div class="details-wrap" data-equalizer-watch>
               <div class="wrap">
                 <p><?php the_sub_field('details'); ?></p>
-                <a href="<?php the_sub_field('link'); ?>" class="button" target="_blank">Vsit Website</a>
+                <a href="<?php the_sub_field('link'); ?>" class="button" target="_blank">Visit Website</a>
               </div>
             </div>
           </div>
