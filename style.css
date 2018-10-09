@@ -762,7 +762,11 @@ article {
             float: left; }
 
 blockquote {
-  border-left: 10px solid #cacaca; }
+  border-left: 10px solid #cacaca;
+  margin-bottom: 40px; }
+  blockquote p {
+    margin-bottom: 0px;
+    font-style: italic; }
 
 #volunteer-form.reveal {
   border: 0px;

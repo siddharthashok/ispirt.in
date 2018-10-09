@@ -274,7 +274,9 @@ article {padding-right: 15px;
 
 }
 
-blockquote {border-left: 10px solid #cacaca;}
+blockquote {border-left: 10px solid #cacaca; margin-bottom: 40px;
+  p {margin-bottom: 0px; font-style: italic;}
+}
 
 #volunteer-form.reveal {border: 0px; background-image: url("img/newsletter.jpg"); background-size: cover; background-position: center; padding: 40px;
   h3 {margin-bottom: 30px;}

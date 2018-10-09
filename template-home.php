@@ -7,25 +7,6 @@
  * @package iSPIRT
  */
 
- //   $url = 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3';
- //   $response = wp_remote_get( 'http://pn.ispirt.in/wp-json/wp/v2/posts?per_page=3&_embed' );
- //
- //   $posts = json_decode( wp_remote_retrieve_body( $response ) );
- //
- //   if( !empty( $posts ) ) {
- //   echo '<ul>';
- //   foreach( $posts as $post ) {
- //     echo '<li><a href="' . $post->link. '">' . $post->title->rendered . '</a></li>';
- //     echo '<li><a href="' . $post->link. '">' . $post->excerpt->rendered . '</a></li>';
- //     echo '<li><a href="' . $post->link. '">' . $post->excerpt->rendered . '</a></li>';
- //   }
- //   echo '</ul>';
- // }
-
-   // var_dump($posts);
-
-
-// die();
 get_header();
 ?>
 
@@ -64,7 +45,7 @@ get_header();
         <div class="header-feature">
           <div class="grid-x">
           <div class="large-3 cell">
-            <a href="<?php the_field('special_block_two_link'); ?>">
+            <a href="https://www.youtube.com/watch?v=YRMUwALjqf8" target="_blank">
               <div class="video-feature" style="background-image: url('https://img.youtube.com/vi/YRMUwALjqf8/hqdefault.jpg');">
               </div>
             </a>
@@ -198,16 +179,20 @@ get_header();
 
           <ul>
             <li>
-              <a href="#">Banking in the time of non-linear change</a>
-              <div class="meta"><p>MARCH 23, 2018</p></div>
+              <a href="http://www.livemint.com/Technology/1lAhCE7gQUcTRLhihGblqK/Banking-in-the-time-of-nonlinear-change.html" target="_blank">Banking in the time of non-linear change</a>
+              <div class="meta"><p>December 28, 2017</p></div>
             </li>
             <li>
-              <a href="#">Banking in the time of non-linear change</a>
-              <div class="meta"><p>MARCH 23, 2018</p></div>
+              <a href="http://www.business-standard.com/article/companies/ispirt-to-tap-ideas-from-startups-to-build-services-for-underserved-indians-117081401640_1.html" target="_blank">iSPIRT to tap ideas from startups to build services for underserved Indian</a>
+              <div class="meta"><p>August 20, 2017</p></div>
             </li>
             <li>
-              <a href="#">Banking in the time of non-linear change</a>
-              <div class="meta"><p>MARCH 23, 2018</p></div>
+              <a href="http://www.livemint.com/Industry/3cU4Mm4ACkDbapE14jGxJM/iSPIRT-sees-mobile-payments-driving-innovation-at-tech-start.html" target="_blank">iSPIRT sees mobile payments driving innovation at tech start-ups</a>
+              <div class="meta"><p>August 14, 2017</p></div>
+            </li>
+            <li>
+              <a href="http://www.ispirt.in/Media/Documents/iSPIRTpressreleaseonBudget1Feb2017.pdf" target="_blank">iSPIRT Response to Union Budget 2017</a>
+              <div class="meta"><p>February 01, 2017</p></div>
             </li>
           </ul>
 

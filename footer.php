@@ -57,9 +57,9 @@
 						<h3>Follow</h3>
 						<div class="social">
 							<ul>
-								<li> <a href="https://www.facebook.com/ProductNation.in/" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt=""> </a> </li>
-								<li> <a href="http://twitter.com/@product_nation" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt=""> </a> </li>
-								<li> <a href="http://www.linkedin.com/company/3117368?trk=tyah&trkInfo=tas%3Aispirt%2Cidx%3A2-1-2" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin.svg" alt=""> </a> </li>
+								<li> <a href="https://www.facebook.com/ProductNationIN/" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg" alt=""> </a> </li>
+								<li> <a href="https://twitter.com/Product_Nation" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/twitter.svg" alt=""> </a> </li>
+								<li> <a href="https://www.linkedin.com/company/ispirt-foundation/" target="_blank"> <img src="<?php echo get_template_directory_uri(); ?>/img/linkedin.svg" alt=""> </a> </li>
 							</ul>
 						</div>
 						<div class="cleartrip"></div>
