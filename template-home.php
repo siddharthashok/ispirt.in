@@ -271,7 +271,7 @@ get_header();
       <div class="large-6 cell">
         <div class="details-wrap">
           <p>We need great talent, help us improve India. <br>Together we can achieve great things!</p>
-          <a href="#" class="button" data-open="volunteer-form">Apply Now</a>
+          <a class="button" data-open="volunteer-form">Apply Now</a>
         </div>
 
 
