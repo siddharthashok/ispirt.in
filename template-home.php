@@ -195,45 +195,9 @@ get_header();
         <h2>In The News</h2>
 
         <div class="news-wrap">
-        <?php $args = array('post_type' => 'news','posts_per_page' => -1);?>
-            <?php $loop = new WP_Query($args);?>
+
           <ul>
-              <?php if ( $loop->have_posts() ) {
-                  $counter = 0;
-                  while ( $loop->have_posts() ) {
-                    $loop->the_post();
-                    
-                    if(get_field('show_on_home_page')==true)
-                    {
-                        $counter++;
-              ?>
-                <li>
-                  <a href="<?php echo get_field('news_url')?>"><?php echo get_the_title();?></a>
-                  <?php 
-                    if(get_field('news_source'))
-                      {
-                        echo "<span class='news-source'> - ". get_field('news_source'). "</span>";
-                      } 
-                  ?>
-                  <div class="meta">
-                    <p>
-                      <?php 
-                        echo get_field('date'); 
-                      ?>
-                    </p>
-                  </div>
-                </li>
-            <?
-                    }
-                    if($counter==4)
-                    {
-                      break;
-                    }
-                  }
-                }
-                wp_reset_postdata();
-            ?>
-            <!-- <li>
+            <li>
               <a href="#">Banking in the time of non-linear change</a>
               <div class="meta"><p>MARCH 23, 2018</p></div>
             </li>
@@ -244,7 +208,7 @@ get_header();
             <li>
               <a href="#">Banking in the time of non-linear change</a>
               <div class="meta"><p>MARCH 23, 2018</p></div>
-            </li> -->
+            </li>
           </ul>
 
           <a href="<?php echo site_url()?>/media" class="button">Show more</a>
@@ -288,7 +252,7 @@ get_header();
           endif;
 
           ?>
-          
+
         </div>
       </div>
     </div>
