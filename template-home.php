@@ -70,9 +70,9 @@ get_header();
       <div class="grid-container">
         <div class="grid-x grid-padding-x">
           <div class="large-12 cell">
-            <h2>Our Four Pillars</h2>
+            <h2>Our Three Pillars</h2>
           </div>
-          <div class="large-3 cell">
+          <div class="large-4 cell">
             <div class="wrap">
               <div class="number">1.</div>
               <h3>Policy</h3>
@@ -80,7 +80,7 @@ get_header();
               <a href="<?php the_field('policy_link'); ?>">Read more</a>
             </div>
           </div>
-          <div class="large-3 cell">
+          <div class="large-4 cell">
             <div class="wrap">
               <div class="number">2.</div>
               <h3>Playbook</h3>
@@ -88,7 +88,7 @@ get_header();
               <a href="<?php the_field('playbook_link'); ?>">Read more</a>
             </div>
           </div>
-          <div class="large-3 cell">
+          <div class="large-4 cell">
             <div class="wrap">
               <div class="number">3.</div>
               <h3>Market Catalysts</h3>
@@ -96,14 +96,14 @@ get_header();
               <a href="<?php the_field('market_catalysts_link'); ?>">Read more</a>
             </div>
           </div>
-          <div class="large-3 cell">
+          <!-- <div class="large-3 cell">
             <div class="wrap">
               <div class="number">4.</div>
               <h3>Platform</h3>
               <p><?php the_field('platform'); ?></p>
               <a href="<?php the_field('platform_link'); ?>">Read more</a>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
