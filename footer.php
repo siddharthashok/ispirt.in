@@ -43,9 +43,12 @@
 					<div class="wrap">
 						<h3>iSPIRT</h3>
 						<p>&copy; iSPIRT 2018 ESTABLISHED 2013<br>
-iSpirt: Indian Software Product Industry Round Table<br>
-Designed and developed by <a href="#">GrandWorks</a>
-</p>
+						iSpirt: Indian Software Product Industry Round Table<br>
+						Designed and developed by
+						<a href="https://grandworks.co/" target="_blank">
+							<span class="grandworks"><?php echo file_get_contents(get_template_directory_uri()."/img/grandworks.svg"); ?></span>
+						</a>
+						</p>
 					</div>
 				</div>
 
