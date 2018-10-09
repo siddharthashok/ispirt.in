@@ -239,7 +239,7 @@ a {
   #pillers .wrap {
     border: 2px solid #CDF0F7;
     border-radius: 5px;
-    padding: 40px;
+    padding: 30px;
     height: 100%; }
     #pillers .wrap .number {
       color: #000000;
@@ -790,8 +790,8 @@ blockquote {
 
 @media print, screen and (min-width: 1281px) {
   .grid-padding-x > .cell {
-    padding-right: 25px;
-    padding-left: 25px; }
+    padding-right: 20px;
+    padding-left: 20px; }
   #profile-grid .profile-wrap {
     margin-bottom: 50px; } }
 
