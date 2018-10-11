@@ -1,3 +1,3 @@
 ## Demo link:
 
-http://ispirt.nicestuff.in/
+Live site: http://ispirt.in
