@@ -91,7 +91,15 @@ function getData()
                 requestData(post_url).then(imageDetails => {
                     temp['id'] = post.id;
                     temp['link']=post.link;
-                    let imageUrl = imageDetails.media_details.sizes.medium.source_url;
+                    //let imageUrl = imageDetails.media_details.sizes.medium.source_url;
+                    if(imageDetails.media_details.sizes.length>0)
+                      {
+                        imageUrl = imageDetails.media_details.sizes.medium.source_url;
+                      }
+                      else
+                      {
+                        imageUrl = imageDetails.source_url;
+                      }
                     temp['imgSrc']=`background-image:url(${imageUrl});`;
                     temp['title']=post.title.rendered;
                     temp['excerpt']=post.excerpt.rendered;

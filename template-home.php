@@ -122,25 +122,29 @@ get_header();
 
           <div class="medium-4 cell" v-for="post in posts" v-cloak>
             <div class="wrap">
-              <a :href="post.link" target="_blank"><div class="image-wrap" :style="post.imgSrc"></div></a>
+
+              <div class="image-wrap" :style="post.imgSrc"></div>
+
               <div class="content-wrap">
-              <div class="title">
-                <a :href="post.link" target="_blank"><h4 v-html="post.title"></h4></a>
+
+                <div class="title">
+
+                  <h4>{{post.title}}</h4>
+
+                </div>
+
+                <div class="meta">
+
+                  <span>{{post.date}}</span>
+
+                </div>
+
+                <div class="excerpt" v-html="post.excerpt"></div>
+
+                <a :href="post.link" target="_blank">Read more</a>
+
               </div>
 
-              <div class="meta">
-
-                <span>{{post.date}}</span>
-
-              </div>
-
-              <div class="excerpt" v-html="post.excerpt"></div>
-
-              <a :href="post.link" target="_blank">Read more</a>
-
-            </div>
-
-          </div>
 
 
         </div>
