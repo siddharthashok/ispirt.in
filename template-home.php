@@ -51,7 +51,8 @@ get_header();
             </a>
           </div>
           <div class="large-9 cell">
-            <div class="content-feature" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/letter.jpg');">
+            <!-- <div class="content-feature" style="background-image: url('<?php echo get_template_directory_uri(); ?>/img/letter.jpg');"> -->
+            <div class="content-feature">
               <h3><?php the_field('featured_message_title'); ?></h3>
               <p><?php the_field('featured_message_content'); ?></p>
               <a href="<?php the_field('featured_message_link'); ?>">Read more</a>

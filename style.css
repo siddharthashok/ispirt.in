@@ -210,7 +210,8 @@ a {
       background-position: center;
       position: relative;
       padding: 25px 40px;
-      z-index: 1; }
+      z-index: 1;
+      background-image: url("img/letter.jpg"); }
       #top-header .left-content .header-feature .content-feature:after {
         content: "";
         position: absolute;
