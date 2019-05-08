@@ -701,7 +701,7 @@ article {
         line-height: 58px;
         text-transform: none;
         margin-bottom: 30px; }
-      .site-footer .newsletter .wrap input {
+      .site-footer .newsletter .wrap input.email {
         width: calc(100% - 132px);
         margin-right: 10px;
         float: left; }
