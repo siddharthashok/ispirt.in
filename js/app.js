@@ -79,7 +79,7 @@ function getData()
           {
             temp['id'] = post.id;
             temp['link']=post.link;
-            temp['imgSrc'] = `background-image:url(http://via.placeholder.com/350x150)`;//change the image link here
+            temp['imgSrc'] = 'background-image:url('+templatePath+'/img/backup.jpg)';//change the image link here
             temp['title']=post.title.rendered;
             temp['excerpt']=post.excerpt.rendered;
             temp['date'] = formatedDate

@@ -123,13 +123,13 @@ get_header();
           <div class="medium-4 cell" v-for="post in posts" v-cloak>
             <div class="wrap">
 
-              <div class="image-wrap" :style="post.imgSrc"></div>
+            <a :href="post.link" target="_blank"><div class="image-wrap" :style="post.imgSrc"></div></a>
 
               <div class="content-wrap">
 
                 <div class="title">
 
-                  <h4>{{post.title}}</h4>
+                <a :href="post.link" target="_blank"><h4>{{post.title}}</h4></a>
 
                 </div>
 
@@ -144,9 +144,6 @@ get_header();
                 <a :href="post.link" target="_blank">Read more</a>
 
               </div>
-
-
-
         </div>
       </div>
     </section>
