@@ -483,3 +483,45 @@ function my_acf_default_date($field) {
   $field['default_value'] = date('F d, Y');
   return $field;
 }
+
+//////////// Sort repeater
+
+function my_acf_load_value( $value, $post_id, $field ) {
+	$order = array();
+
+	if( empty($value) ) {
+
+		return $value;
+	}
+
+	// Get field Id
+	$sub_field_id = "";
+	foreach($field["sub_fields"] as $key => $field_array)
+	{
+		if($field_array["name"]=="name")
+		{
+			$sub_field_id = $field_array["key"];
+
+		}
+	}
+
+	foreach( $value as $i => $row ) {
+
+
+		$order[ $i ] = $row[$sub_field_id];
+
+	}
+
+
+	// multisort
+	array_multisort( $order, SORT_ASC, $value );
+
+
+	// return
+	return $value;
+
+}
+
+add_filter('acf/load_value/name=core_volunteers', 'my_acf_load_value', 10, 3);
+add_filter('acf/load_value/name=volunteers', 'my_acf_load_value', 10, 3);
+add_filter('acf/load_value/name=alumni', 'my_acf_load_value', 10, 3);
