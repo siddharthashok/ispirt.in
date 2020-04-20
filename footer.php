@@ -73,6 +73,7 @@
 						<p>iSPIRT Foundation,<br>
 	No.231-236, 2nd Floor, Raheja Arcade,<br>
 	Koramangala, Bangalore - 560 095</p>
+	<a href="mailto:community@ispirt.in">community@ispirt.in</a>
 					</div>
 				</div>
 
@@ -80,7 +81,7 @@
 					<div class="wrap">
 						<h3>iSPIRT</h3>
 						<p>&copy; iSPIRT 2018 ESTABLISHED 2013<br>
-						iSpirt: Indian Software Product Industry Round Table<br>
+						iSPIRT: Indian Software Product Industry Round Table<br>
 						Designed and developed by
 						<a href="https://grandworks.co/" target="_blank">
 							<span class="grandworks">

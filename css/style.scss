@@ -259,6 +259,7 @@ article {padding-right: 15px;
         }
       }
     }
+    a {color: #B1B9C3;}
   }
   .foot { padding: 25px 0px; background: #202020;
     .wrap {height: 100%; @include absolute-center();}
@@ -436,6 +437,8 @@ blockquote {border-left: 10px solid #cacaca; margin-bottom: 40px;
   #code-of-ethics-level{margin-bottom: 40px;}
   #secondary{margin-top: 20px;}
   .side-nav{margin-bottom: 40px;}
+
+  .site-footer .newsletter .wrap input.email {width: 100%;}
 }
 
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed{width:100%; height: 400px;}

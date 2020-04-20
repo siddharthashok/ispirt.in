@@ -736,6 +736,8 @@ article {
         .site-footer .add.add2 .grandworks:hover svg path {
           fill: #ffffff;
           transition: all 0.5s ease; }
+    .site-footer .add a {
+      color: #B1B9C3; }
   .site-footer .foot {
     padding: 25px 0px;
     background: #202020; }
@@ -1121,7 +1123,9 @@ blockquote {
   #secondary {
     margin-top: 20px; }
   .side-nav {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+  .site-footer .newsletter .wrap input.email {
+    width: 100%; } }
 
 .col-md-6 iframe, .col-md-6 object, .col-md-6 embed {
   width: 100%;
