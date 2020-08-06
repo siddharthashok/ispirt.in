@@ -13,7 +13,7 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127222409-1"></script>
 <script>
@@ -40,7 +40,7 @@
     <div id="top-navigation">
       <div class="logo">
 				<a href="<?php echo site_url(); ?>">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/isprit_logo.svg" alt="">
+				<img src="<?php echo get_template_directory_uri(); ?>/img/ispirt-logo.svg" alt="">
 				</a>
       </div>
 			<div id="hamburger">
