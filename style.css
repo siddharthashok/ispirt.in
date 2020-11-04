@@ -679,6 +679,24 @@ article {
       text-decoration: none;
       margin-bottom: 15px; }
 
+.widget_text {
+  border: 2px solid #CDF0F7;
+  border-radius: 5px;
+  padding: 20px 30px 10px 30px;
+  margin-bottom: 50px; }
+  .widget_text .widget-title {
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 26px;
+    line-height: 43px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 10px;
+    line-height: 39px; }
+
 .site-footer {
   background: #000000; }
   .site-footer .newsletter {
