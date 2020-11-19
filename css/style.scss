@@ -35,6 +35,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 body, p {@include type-regular();}
 h2 {@include type-title();}
 h3 {@include type-title-small();}
+h4 {@include type-title-small(); font-size: 18px; line-height: normal; text-transform: none; margin-bottom: 10px; font-weight: 600;}
+
 a {@include type-link();
   &:hover {color: #FF8231;}
 }

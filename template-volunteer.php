@@ -103,9 +103,9 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
         <div class="grid-container">
           <div class="grid-x grid-padding-x">
 				<div class="large-6 cell">
-          <div class="side-nav side-nav-challange">
-
-					<h3 style="margin-bottom: 25px;">Below are the problem statements under challenges</h3>
+          <div class="side-nav side-nav-challange" style="height: 100%;">
+            <h3 style="margin-bottom: 25px;">Volunteer Forms</h3>
+					<h4>Below are the problem statements under challenges</h4>
 <ol>
 	<li>Underwriting Models for Cash Flow Lending</li>
 	<li>Open Credit Enablement Network (Performance)</li>
@@ -117,30 +117,29 @@ if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned
 </ol>
 
 <br>
-<p>If you are interested in any of the above areas, we request you to <a href="https://bit.ly/iSPIRTForm" target="_blank">fill out the form</a>.</p>
+<p>If you are keen on volunteering and if the none of the above challenges align with you, please fill this form <a href="http://bit.ly/iSPIRTVolunteeringForm" target="_blank">http://bit.ly/iSPIRTVolunteeringForm</a>.</p>
+<p>Please read the information before filling out the form.</p>
 </div>
 				</div>
 
         <div class="large-6 cell">
-          <div class="grid-x grid-padding-x">
-            <div class="large-12 cell">
-              <div class="side-nav">
-                <h3>VOLUNTEER HANDBOOK</h3>
+              <div class="side-nav" style="height: 100%;">
+                <h3 style="margin-bottom: 25px;">Information</h3>
+
+                <h4>Volunteer Handbook</h4>
                 <p>The volunteer model that underpins iSPIRT has been around since 2009. Every three years we write about our volunteer model so that others can learn from it and build their own volunteer networks</p>
                 <a href="https://pn.ispirt.in/presenting-the-ispirt-volunteer-handbook" target="_blank">Know More</a>
-              </div>
-            </div>
 
-            <div class="large-12 cell">
-              <div class="side-nav">
-                <h3>ISPIRT PLAYGROUND CODA</h3>
+                <br>
+                <br>
+
+                <h4>iSPIRT Playground CODA</h4>
+
                 <p>We call ourselves 30-year architects for India’s hard problems. The critical insight to a 30-year journey of success is that it requires one to be able to work with and grow the ecosystem, rather than grow itself.</p>
                 <a href="https://pn.ispirt.in/presenting-the-ispirt-volunteer-handbook" target="_blank">Know More</a>
 
               </div>
-            </div>
 
-          </div>
         </div>
 			</div>
 		</div>
