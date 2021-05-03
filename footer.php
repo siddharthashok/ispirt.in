@@ -80,7 +80,7 @@
 				<div class="medium-6 cell add add2">
 					<div class="wrap">
 						<h3>iSPIRT</h3>
-						<p>&copy; iSPIRT 2018 ESTABLISHED 2013<br>
+						<p>&copy; iSPIRT 2021 ESTABLISHED 2013<br>
 						iSPIRT: Indian Software Product Industry Round Table<br>
 						Designed and developed by
 						<a href="https://grandworks.co/" target="_blank">
