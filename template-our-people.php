@@ -127,11 +127,14 @@
            $core_volunteer_title = "Core Volunteer";
            $balloon_volunteer_title = "Balloon Volunteer";
            $volunteer_title = "Volunteer";
+           $alumni_volunteer_title = "Volunteer Alumni";
 
            $anchor_volunteer = array();
            $core_volunteer = array();
            $balloon_volunteer = array();
            $volunteer = array(); 
+           $alumni_volunteer = array();
+
            foreach ($response_array as $key => $value) {
               switch($value->VolunteerType)
               {
@@ -144,12 +147,17 @@
                 case $balloon_volunteer_title : 
                   array_push($balloon_volunteer, $value);
                   break;
-                default : 
+                case $volunteer_title : 
                   array_push($volunteer, $value);
                   break;
+                case $alumni_volunteer_title :
+                  array_push($alumni_volunteer,$value);
+                
+                default :
+                break;
               }
-              
            }
+           
  					while ( have_posts() ) :
  						the_post();
  						?>
@@ -302,15 +310,15 @@
                       // no rows found
 
                   endif;
-                  if( !empty($balloon_volunteer) ):
+                  if( !empty($alumni_volunteer) ):
                   ?>
                   <div class="large-12 cell padding-top">
-                      <h3><?= $balloon_volunteer_title; ?></h3>
+                      <h3><?= $alumni_volunteer_title; ?></h3>
                       <p><?php /*the_field('alumni_description');*/?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                     foreach($balloon_volunteer as $key => $value)
+                     foreach($alumni_volunteer as $key => $value)
                      {
                         $name = $value->Name;
                         $profile_link = $value->LinkedIn;
