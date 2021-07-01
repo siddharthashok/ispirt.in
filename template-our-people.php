@@ -120,6 +120,34 @@
 
  					<main id="main" class="site-main">
  					<?php
+           $response = wp_remote_get("https://zastra.ispirt.in/api/wordpress");
+           $response_array = json_decode($response['body']);
+
+           $anchor_volunteer_title = "Anchor Volunteer";
+           $core_volunteer_title = "Core Volunteer";
+           $balloon_volunteer_title = "Balloon Volunteer";
+
+           $anchor_volunteer = array();
+           $core_volunteer = array();
+           $balloon_volunteer = array();
+
+           foreach ($response_array as $key => $value) {
+              switch($value->VolunteerType)
+              {
+                case $anchor_volunteer_title : 
+                    array_push($anchor_volunteer, $value);
+                  break;
+                case $core_volunteer_title :
+                  array_push($core_volunteer, $value);
+                  break;
+                case $balloon_volunteer_title : 
+                  array_push($balloon_volunteer, $value);
+                  break;
+                default : 
+                  break;
+              }
+              
+           }
  					while ( have_posts() ) :
  						the_post();
  						?>
@@ -135,37 +163,45 @@
               <div class="grid-x grid-padding-x" id="profile-grid">
 
 
-              <?php
-
-                  if( have_rows('core_volunteers') ):
-                    ?>
+                <?php
+                  
+                  if( !empty($core_volunteer) ):
+                ?>
                     <div class="large-12 cell">
-                      <h3>CORE VOLUNTEERS</h3>
-                      <p><?php the_field('core_volunteer_description')?></p>
+                      <h3><?= $core_volunteer_title; ?></h3>
+                      <p><?php /*the_field('core_volunteer_description')*/?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('core_volunteers') ) : the_row();
+                      foreach($core_volunteer as $key => $value)
+                      {
 
-                        $name = get_sub_field('name');
-                        $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
-                        $image = get_sub_field('image');
+                        $name = $value->Name;
+                        $profile_link = $value->LinkedIn;
+                        $code_of_ethics_level = $value->EthicsLevel;
+                        $image = $value->ProfileImage;
                       ?>
                       <div class="medium-3 small-6 cell">
-                        <a href="<?php echo $profile_link; ?>" target="_blank">
+                        <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
-                          </div>
+                          <?php 
+                            if(!empty($code_of_ethics_level))
+                            {
+                          ?>
+                              <div class="coe-level">
+                                <?php echo $code_of_ethics_level; ?>
+                              </div>
+                          <?php
+                            }
+                          ?>
                         </div>
-                        </a>
+                        <?php if(!empty($profile_link)) {?></a><?php }?>
                       </div>
                   <?php
-                      endwhile;
+                      }
 
                   else :
 
@@ -176,35 +212,42 @@
 
 
 
-                  if( have_rows('volunteers') ):
+                  if( !empty($anchor_volunteer) ):
                     ?>
                     <div class="large-12 cell padding-top">
-                      <h3>VOLUNTEERS</h3>
-                      <p><?php the_field('volunteers_description')?></p>
+                      <h3><?= $anchor_volunteer_title; ?></h3>
+                      <p><?php /*the_field('volunteers_description');*/?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('volunteers') ) : the_row();
-
-                        $name = get_sub_field('name');
-                        $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
-                        $image = get_sub_field('image');
+                     foreach($anchor_volunteer as $key => $value)
+                     {
+                        $name = $value->Name;
+                        $profile_link = $value->LinkedIn;
+                        $code_of_ethics_level = $value->EthicsLevel;
+                        $image = $value->ProfileImage;
                       ?>
                       <div class="medium-3 small-6 cell">
-                        <a href="<?php echo $profile_link; ?>" target="_blank">
+                        <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <div class="coe-level">
-                            <?php echo $code_of_ethics_level; ?>
-                          </div>
+                          <?php 
+                            if(!empty($code_of_ethics_level))
+                            {
+                          ?>
+                              <div class="coe-level">
+                                <?php echo $code_of_ethics_level; ?>
+                              </div>
+                          <?php
+                            }
+                          ?>
                         </div>
-                        </a>
+                        <?php if(!empty($profile_link)) {?></a><?php }?>
                       </div>
                   <?php
-                      endwhile;
+                      }
 
                   else :
 
@@ -215,37 +258,42 @@
 
 
 
-                  if( have_rows('alumni') ):
+                  if( !empty($balloon_volunteer) ):
                     ?>
                     <div class="large-12 cell padding-top">
-                      <h3>Alumni</h3>
-                      <p><?php the_field('alumni_description')?></p>
+                      <h3><?= $balloon_volunteer_title; ?></h3>
+                      <p><?php /*the_field('alumni_description');*/?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                      while ( have_rows('alumni') ) : the_row();
-
-                        $name = get_sub_field('name');
-                        $profile_link = get_sub_field('profile_link');
-                        $code_of_ethics_level = get_sub_field('code_of_ethics_level');
-                        $image = get_sub_field('image');
+                     foreach($balloon_volunteer as $key => $value)
+                     {
+                        $name = $value->Name;
+                        $profile_link = $value->LinkedIn;
+                        $code_of_ethics_level = $value->EthicsLevel;
+                        $image = $value->ProfileImage;
                       ?>
                       <div class="medium-3 small-6 cell">
-                        <a href="<?php echo $profile_link; ?>" target="_blank">
+                        <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
                         <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <?php if($code_of_ethics_level){?>
-                            <div class="coe-level">
-                              <?php echo $code_of_ethics_level; ?>
-                            </div>
-                          <?php }?>
+                          <?php 
+                            if(!empty($code_of_ethics_level))
+                            {
+                          ?>
+                              <div class="coe-level">
+                                <?php echo $code_of_ethics_level; ?>
+                              </div>
+                          <?php
+                            }
+                          ?>
                         </div>
-                        </a>
+                        <?php if(!empty($profile_link)) {?></a><?php }?>
                       </div>
                   <?php
-                      endwhile;
+                      };
 
                   else :
 
