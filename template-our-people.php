@@ -126,11 +126,12 @@
            $anchor_volunteer_title = "Anchor Volunteer";
            $core_volunteer_title = "Core Volunteer";
            $balloon_volunteer_title = "Balloon Volunteer";
+           $volunteer_title = "Volunteer";
 
            $anchor_volunteer = array();
            $core_volunteer = array();
            $balloon_volunteer = array();
-
+           $volunteer = array(); 
            foreach ($response_array as $key => $value) {
               switch($value->VolunteerType)
               {
@@ -144,6 +145,7 @@
                   array_push($balloon_volunteer, $value);
                   break;
                 default : 
+                  array_push($volunteer, $value);
                   break;
               }
               
@@ -212,15 +214,15 @@
 
 
 
-                  if( !empty($anchor_volunteer) ):
+                  if( !empty($volunteer) ):
                     ?>
                     <div class="large-12 cell padding-top">
-                      <h3><?= $anchor_volunteer_title; ?></h3>
+                      <h3><?= $volunteer_title; ?></h3>
                       <p><?php /*the_field('volunteers_description');*/?></p>
                     </div>
                     <?php
                    	// loop through the rows of data
-                     foreach($anchor_volunteer as $key => $value)
+                     foreach($volunteer as $key => $value)
                      {
                         $name = $value->Name;
                         $profile_link = $value->LinkedIn;
@@ -258,9 +260,51 @@
 
 
 
-                  if( !empty($balloon_volunteer) ):
+                  if( !empty($anchor_volunteer) ):
                     ?>
                     <div class="large-12 cell padding-top">
+                      <h3><?= $anchor_volunteer_title; ?></h3>
+                      <p><?php /*the_field('alumni_description');*/?></p>
+                    </div>
+                    <?php
+                   	// loop through the rows of data
+                     foreach($anchor_volunteer as $key => $value)
+                     {
+                        $name = $value->Name;
+                        $profile_link = $value->LinkedIn;
+                        $code_of_ethics_level = $value->EthicsLevel;
+                        $image = $value->ProfileImage;
+                      ?>
+                      <div class="medium-3 small-6 cell">
+                        <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
+                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                          <div class="name">
+                            <?php echo $name; ?>
+                          </div>
+                          <?php 
+                            if(!empty($code_of_ethics_level))
+                            {
+                          ?>
+                              <div class="coe-level">
+                                <?php echo $code_of_ethics_level; ?>
+                              </div>
+                          <?php
+                            }
+                          ?>
+                        </div>
+                        <?php if(!empty($profile_link)) {?></a><?php }?>
+                      </div>
+                  <?php
+                      };
+
+                  else :
+
+                      // no rows found
+
+                  endif;
+                  if( !empty($balloon_volunteer) ):
+                  ?>
+                  <div class="large-12 cell padding-top">
                       <h3><?= $balloon_volunteer_title; ?></h3>
                       <p><?php /*the_field('alumni_description');*/?></p>
                     </div>
@@ -300,7 +344,6 @@
                       // no rows found
 
                   endif;
-
                   ?>
 
 
