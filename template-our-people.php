@@ -193,7 +193,7 @@
                       ?>
                       <div class="medium-3 small-6 cell">
                         <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
-                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                        <div class="profile-wrap lazy" data-bg = '<?php echo $image; ?>' >
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
@@ -239,7 +239,7 @@
                       ?>
                       <div class="medium-3 small-6 cell">
                         <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
-                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                        <div class="profile-wrap lazy" data-bg = '<?php echo $image; ?>'>
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
@@ -285,7 +285,7 @@
                       ?>
                       <div class="medium-3 small-6 cell">
                         <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
-                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                        <div class="profile-wrap lazy" data-bg = '<?php echo $image; ?>'>
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
@@ -327,21 +327,12 @@
                       ?>
                       <div class="medium-3 small-6 cell">
                         <?php if(!empty($profile_link)) {?><a href="<?php echo $profile_link; ?>" target="_blank"><?php }?>
-                        <div class="profile-wrap" style="background-image: url('<?php echo $image; ?>')">
+                        <div class="alumni-profile-wrap">
                           <div class="name">
                             <?php echo $name; ?>
                           </div>
-                          <?php 
-                            if(!empty($code_of_ethics_level))
-                            {
-                          ?>
-                              <div class="coe-level">
-                                <?php echo $code_of_ethics_level; ?>
-                              </div>
-                          <?php
-                            }
-                          ?>
                         </div>
+
                         <?php if(!empty($profile_link)) {?></a><?php }?>
                       </div>
                   <?php
@@ -401,6 +392,11 @@
  			</div>
  		</div>
  	</div><!-- #primary -->
-
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+      // Your custom settings go here
+    });
+  </script>
  <?php
  get_footer();
